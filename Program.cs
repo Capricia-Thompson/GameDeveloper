@@ -1,13 +1,19 @@
-﻿Enemy Glados = new Enemy("Glados");
+﻿MeleeFighter Meleer = new MeleeFighter();
+RangedFighter Ranger = new RangedFighter();
+MagicCaster Caster = new MagicCaster();
 
-Attack Drop = new Attack("Drop", 5);
+Meleer.PerformAttack(Ranger, "Kick");
 
-Attack LaserBeam = new Attack("Laser Beam", 20);
+Meleer.Rage(Caster);
 
-Attack AcidPool = new Attack("Acid Pool", 50);
+Ranger.PerformAttack(Meleer, "Shoot an arrow");
 
-Glados.AttackList.Add(Drop);
-Glados.AttackList.Add(LaserBeam);
-Glados.AttackList.Add(AcidPool);
+Ranger.Dash(Meleer);
 
-Glados.RandomAttack();
+Ranger.PerformAttack(Meleer, "Shoot an arrow");
+
+Caster.PerformAttack(Meleer, "Fireball");
+
+Caster.Heal(Ranger);
+
+Caster.Heal(Caster);

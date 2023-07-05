@@ -1,11 +1,11 @@
-class Attack
+public class Attack
 {
-    string Name;
-    int DamageAmount;
+    public string Name;
+    public int DamageAmount;
     public Attack(string name, int dmg)
     {
         Name = name;
         DamageAmount = dmg;
-        Console.WriteLine($"{Name} used to deliver {DamageAmount} damage points!");
+        // Console.WriteLine($"{Name} used to deliver {DamageAmount} damage points!");
     }
 }
